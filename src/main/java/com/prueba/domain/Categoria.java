@@ -7,6 +7,7 @@ package com.prueba.domain;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import java.util.List;
 import lombok.Data;
 
 @Data 
@@ -23,7 +24,14 @@ public class Categoria implements Serializable {
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
+    
 
+    @OneToMany
+    @JoinColumn(name = "id_Categoria", insertable = false, updatable= false)
+    List<Producto> productos;
+    
+    
+    
     public Categoria() {
         
     }

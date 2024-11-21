@@ -154,6 +154,37 @@
                         </div>
                     </form>
                 </div>
+                <section th:fragment="filtrosExistencias" class="bg-light">
+                    <div class="row py-2">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <form method="POST" th:action="@{/pruebas/queryExistencias}" class="was-validated">
+                                <div class="card">                            
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="existenciasMin">[[#{pruebas.existencias.minima}]]</label>
+                                            <input type="number" class="form-control" 
+                                                   th:value="${existenciasMin}"
+                                                   th:name="existenciasMin" required="true"/>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="existenciasMax">[[#{pruebas.existencias.maxima}]]</label>
+                                            <input type="number" class="form-control" 
+                                                   th:value="${existenciasMax}"
+                                                   th:name="existenciasMax" required="true"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-check"></i> [[#{pruebas.filtrar}]]
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>   
+                    </div>
+                </section>
+
             </div>
         </section> 
     </body>

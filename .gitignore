@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/firebase/techshop-f811c-firebase-adminsdk-injoj-9d0898cd84.json
